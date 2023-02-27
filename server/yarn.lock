@@ -86,6 +86,13 @@
   dependencies:
     fast-json-stringify "^5.0.0"
 
+"@fastify/flash@^5.0.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fastify/flash/-/flash-5.1.0.tgz#9842c8d700d2000a56f8734eb89e2369de744c0c"
+  integrity sha512-8/MwOWkky0RsSgSVRcpoY8Q+lGj+vx/QF60E0Opp+92KtLFWldr6eWUL+gpGJNmQiodsKCr0osjKIjySuUuM/g==
+  dependencies:
+    fastify-plugin "^4.0.0"
+
 "@fastify/helmet@^10.1.0":
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/@fastify/helmet/-/helmet-10.1.0.tgz#8b124c807d9528680e6dcef8ca3e2e614eb547e5"
@@ -118,6 +125,14 @@
     hexoid "^1.0.0"
     secure-json-parse "^2.4.0"
     stream-wormhole "^1.1.0"
+
+"@fastify/passport@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@fastify/passport/-/passport-2.2.0.tgz#3b602098af405dabfe68a170fea06cad77558ff3"
+  integrity sha512-JbrtmJUotEgPf9FPpCpbMcVDghLbjziAkj7EnufEaRpMOZE3wkeVg0CzgnD+nrIGoHo6D31RCJMIZMvvLxb+ew==
+  dependencies:
+    "@fastify/flash" "^5.0.0"
+    fastify-plugin "^4.0.0"
 
 "@fastify/send@^2.0.0":
   version "2.0.1"
