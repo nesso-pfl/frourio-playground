@@ -61,6 +61,14 @@
   dependencies:
     text-decoding "^1.0.0"
 
+"@fastify/cookie@^8.0.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@fastify/cookie/-/cookie-8.3.0.tgz#7d3304fcf0d11ea64ae8e02d65ae217b01fe1cf4"
+  integrity sha512-P9hY9GO11L20TnZ33XN3i0bt+3x0zaT7S0ohAzWO950E9PB2xnNhLYzPFJIGFi5AVN0yr5+/iZhWxeYvR6KCzg==
+  dependencies:
+    cookie "^0.5.0"
+    fastify-plugin "^4.0.0"
+
 "@fastify/cors@^8.2.0":
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/@fastify/cors/-/cors-8.2.0.tgz#44ce6b28bc111e12679cb02f980f0ce865ff4877"
@@ -133,6 +141,15 @@
   dependencies:
     "@fastify/flash" "^5.0.0"
     fastify-plugin "^4.0.0"
+
+"@fastify/secure-session@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@fastify/secure-session/-/secure-session-6.0.0.tgz#376c6153d8ddfdb26d25d643d4da5c9e27bf066b"
+  integrity sha512-Jlw9gkaKPxLO/pDQWWdD4zFIINBxgO3To/KBv3w//Kynh2pKE6fpJEmGp7PI8j9YenEo42yNcm3pPPoY/EV1LQ==
+  dependencies:
+    "@fastify/cookie" "^8.0.0"
+    fastify-plugin "^4.0.0"
+    sodium-native "^4.0.0"
 
 "@fastify/send@^2.0.0":
   version "2.0.1"
@@ -2196,6 +2213,11 @@ node-dev@^7.1.0:
     resolve "^1.22.0"
     semver "^7.3.7"
 
+node-gyp-build@^4.3.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.6.0.tgz#0c52e4cbf54bbd28b709820ef7b6a3c2d6209055"
+  integrity sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==
+
 node-notifier@^8.0.1:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/node-notifier/-/node-notifier-8.0.2.tgz#f3167a38ef0d2c8a866a83e318c1ba0efeb702c5"
@@ -2887,6 +2909,13 @@ socks@^2.3.3:
   dependencies:
     ip "^2.0.0"
     smart-buffer "^4.2.0"
+
+sodium-native@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/sodium-native/-/sodium-native-4.0.1.tgz#773201b0d7872da294b9b12cd90d4a913dc9a2dd"
+  integrity sha512-OQTaxrVLtMvrnfcwZVsOTHe58MfDApJiHJNoOwcmmrhwvlYkfaUt2WuzRio8PgEMOd96R5aDHY49DCtock1zsA==
+  dependencies:
+    node-gyp-build "^4.3.0"
 
 sonic-boom@^3.1.0:
   version "3.2.1"

@@ -30,6 +30,7 @@
     "@fastify/jwt": "^6.3.3",
     "@fastify/multipart": "^7.3.0",
     "@fastify/passport": "^2.2.0",
+    "@fastify/secure-session": "^6.0.0",
     "@fastify/static": "^6.5.1",
     "@prisma/client": "^4.6.1",
     "dotenv": "^16.0.3",
