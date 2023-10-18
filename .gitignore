@@ -36,3 +36,5 @@ server/**/$*.ts
 server/**/*.db
 server/index.js
 server/upload/
+
+**/*.db-journal

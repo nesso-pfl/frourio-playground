@@ -12,3 +12,11 @@ model Task {
   label String
   done  Boolean @default(false)
 }
+
+model Human {
+  id   Int    @id @default(autoincrement())
+  name String
+  age  Int
+
+  @@unique([name, age])
+}
