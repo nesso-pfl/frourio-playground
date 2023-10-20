@@ -9,6 +9,9 @@ export const pagesPath = {
     $url: (url?: { query?: OptionalQuery0, hash?: string }) => ({ pathname: '/article' as const, query: url?.query, hash: url?.hash })
   },
   "human": {
+    _id: (id: string | number) => ({
+      $url: (url?: { hash?: string }) => ({ pathname: '/human/[id]' as const, query: { id }, hash: url?.hash })
+    }),
     "new": {
       $url: (url?: { hash?: string }) => ({ pathname: '/human/new' as const, hash: url?.hash })
     },

@@ -23,7 +23,9 @@ const Page: NextPage = () => {
             <li key={human.id} className="flex items-center gap-3 py-2">
               <span className="w-[200px]">{human.name}</span>
               <span className="w-[50px]">{human.age}歳</span>
-              <Button className="ml-auto">編集</Button>
+              <Button asChild className="ml-auto">
+                <Link href={pagesPath.human._id(human.id).$url()}>詳細を見る</Link>
+              </Button>
             </li>
           ))}
         </ul>
