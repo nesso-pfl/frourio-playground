@@ -1,7 +1,9 @@
 import useAspidaSWR from '@aspida/swr'
 import { NextPage } from 'next'
+import Link from 'next/link'
 import Layout from '~/components/Layout'
 import { Button } from '~/components/ui/button'
+import { pagesPath } from '~/utils/$path'
 import { apiClient } from '~/utils/apiClient'
 
 const Page: NextPage = () => {
@@ -11,7 +13,9 @@ const Page: NextPage = () => {
     <Layout>
       <div className="flex items-center justify-between border-b pb-2">
         <h1 className="text-2xl">メンバー一覧</h1>
-        <Button>新規作成</Button>
+        <Button asChild>
+          <Link href={pagesPath.human.new.$url()}>新規作成</Link>
+        </Button>
       </div>
       {data ? (
         <ul className="mt-5 divide-y">
