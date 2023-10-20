@@ -48,6 +48,7 @@ const Page: NextPage = () => {
   const params = useParams()
   const router = useRouter()
   const { toast } = useToast()
+  const { mutate: refetchHumans } = useAspidaSWR(apiClient.human)
   const { data, mutate } = useAspidaSWR(apiClient.human._humanId(params ? +params.id : 0), {
     key: params ? params.id : null,
     revalidateOnReconnect: false,
@@ -69,6 +70,7 @@ const Page: NextPage = () => {
   const onSubmit = useCallback(
     async (formValues: Form) => {
       await apiClient.human._humanId(+params.id).$put({ body: formValues })
+      refetchHumans()
       await mutate()
       toast({ description: '更新しました' })
       setIsOpen(false)
