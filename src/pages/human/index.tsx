@@ -21,8 +21,8 @@ const Page: NextPage = () => {
         <ul className="mt-5 divide-y">
           {data.humans.map((human) => (
             <li key={human.id} className="flex items-center gap-3 py-2">
-              <span className="w-[100px]">田中 太郎</span>
-              <span className="w-[50px]">26 歳</span>
+              <span className="w-[200px]">{human.name}</span>
+              <span className="w-[50px]">{human.age}歳</span>
               <Button className="ml-auto">編集</Button>
             </li>
           ))}

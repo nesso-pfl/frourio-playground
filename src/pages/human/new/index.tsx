@@ -36,8 +36,8 @@ const Page: NextPage = () => {
   const onSubmit = useCallback(
     async (formValues: Form) => {
       await apiClient.human.post({ body: formValues })
-      await router.push(pagesPath.human.$url())
       toast({ title: `${formValues.name}(${formValues.age})を作成しました` })
+      await router.push(pagesPath.human.$url())
     },
     [router]
   )
