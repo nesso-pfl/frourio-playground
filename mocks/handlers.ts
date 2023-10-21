@@ -27,8 +27,6 @@ const getWith200 = <
   >
 ) => createHandler(path.$path(), 'get', 200, options)
 
-getWith200(apiClient, { response: 'hello' })
-// @ts-expect-error レスポンスは文字列型以外受け付けない
-getWith200(apiClient, { response: 1 })
-// @ts-expect-error レスポンスは文字列型以外受け付けない
-getWith200(apiClient, { response: { x: 'hello' } })
+export const handlers = [
+  getWith200(apiClient.human._humanId(':id' as unknown as number), { response: { id: 1, name: '田中 太郎', age: 26 } })
+]
