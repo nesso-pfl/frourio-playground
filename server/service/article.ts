@@ -35,11 +35,7 @@ export const getArticles = (search?: string) => {
         .toLowerCase()
         .split(/\s+/)
         .every(
-          (word) =>
-            (article.title + article.body)
-              .replace(/\s/g, '')
-              .toLowerCase()
-              .search(word.toLowerCase()) >= 0
+          (word) => (article.title + article.body).replace(/\s/g, '').toLowerCase().search(word.toLowerCase()) >= 0
         )
   )
   return filtered

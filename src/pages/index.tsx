@@ -22,18 +22,24 @@ const Home: NextPage = () => {
       setLabel('')
       mutate()
     },
-    [label]
+    [label, mutate]
   )
 
-  const toggleDone = useCallback(async (task: Task) => {
-    await apiClient.tasks._taskId(task.id).patch({ body: { done: !task.done } })
-    mutate()
-  }, [])
+  const toggleDone = useCallback(
+    async (task: Task) => {
+      await apiClient.tasks._taskId(task.id).patch({ body: { done: !task.done } })
+      mutate()
+    },
+    [mutate]
+  )
 
-  const deleteTask = useCallback(async (task: Task) => {
-    await apiClient.tasks._taskId(task.id).delete()
-    mutate()
-  }, [])
+  const deleteTask = useCallback(
+    async (task: Task) => {
+      await apiClient.tasks._taskId(task.id).delete()
+      mutate()
+    },
+    [mutate]
+  )
 
   if (error) return <div>failed to load</div>
   if (!tasks) return <div>loading...</div>

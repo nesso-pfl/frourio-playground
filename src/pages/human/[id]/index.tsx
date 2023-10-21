@@ -75,13 +75,13 @@ const Page: NextPage = () => {
       toast({ description: '更新しました' })
       setIsOpen(false)
     },
-    [apiClient, params, toast, mutate]
+    [params, toast, mutate, refetchHumans]
   )
 
   const handleDelete = useCallback(async () => {
     await apiClient.human._humanId(+params.id).delete()
     await router.push(pagesPath.human.$url())
-  }, [apiClient, router, pagesPath])
+  }, [router, params.id])
 
   return (
     <Layout>

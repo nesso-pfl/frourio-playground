@@ -36,17 +36,13 @@ const UserBanner = () => {
     let newToken = ''
 
     try {
-      newToken = `Bearer ${
-        (await apiClient.token.$post({ body: { id, pass } })).token
-      }`
+      newToken = `Bearer ${(await apiClient.token.$post({ body: { id, pass } })).token}`
       setToken(newToken)
     } catch (e) {
       return alert('Login failed')
     }
 
-    setUserInfo(
-      await apiClient.user.$get({ headers: { authorization: newToken } })
-    )
+    setUserInfo(await apiClient.user.$get({ headers: { authorization: newToken } }))
     setIsLoggedIn(true)
   }, [])
 
@@ -81,9 +77,7 @@ const UserBanner = () => {
           <input
             type="text"
             name="query"
-            onInput={(e) =>
-              e.target instanceof HTMLInputElement && setSearch(e.target.value)
-            }
+            onInput={(e) => e.target instanceof HTMLInputElement && setSearch(e.target.value)}
           />
           <button type="submit">search</button>
         </form>
@@ -91,7 +85,6 @@ const UserBanner = () => {
         <div>
           {isLoggedIn ? (
             <>
-              <img src={userInfo.icon} className={styles.userIcon} />
               <span>{userInfo.name}</span>
               <input type="file" accept="image/*" onChange={editIcon} />
               <button onClick={logout}>LOGOUT</button>

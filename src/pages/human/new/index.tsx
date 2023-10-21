@@ -39,7 +39,7 @@ const Page: NextPage = () => {
       toast({ title: `${formValues.name}(${formValues.age})を作成しました` })
       await router.push(pagesPath.human.$url())
     },
-    [router]
+    [router, toast]
   )
 
   return (
