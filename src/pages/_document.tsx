@@ -4,7 +4,8 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html lang="ja">
-      <Head>
+      <Head />
+      <body>
         <Script
           id="gtm"
           dangerouslySetInnerHTML={{
@@ -19,8 +20,6 @@ export default function Document() {
            `
           }}
         />
-      </Head>
-      <body>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TWX78CKB"
