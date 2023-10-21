@@ -69,6 +69,8 @@ const Page: NextPage = () => {
 
   const onSubmit = useCallback(
     async (formValues: Form) => {
+      if (!params) return
+
       await apiClient.human._humanId(+params.id).$put({ body: formValues })
       refetchHumans()
       await mutate()
@@ -79,9 +81,11 @@ const Page: NextPage = () => {
   )
 
   const handleDelete = useCallback(async () => {
+    if (!params) return
+
     await apiClient.human._humanId(+params.id).delete()
     await router.push(pagesPath.human.$url())
-  }, [router, params.id])
+  }, [router, params])
 
   return (
     <Layout>

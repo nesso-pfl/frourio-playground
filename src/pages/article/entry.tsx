@@ -2,7 +2,7 @@ import useAspidaSWR from '@aspida/swr'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Layout from '~/components/OldLayout'
+import Layout from '~/components/Layout'
 import { apiClient } from '~/utils/apiClient'
 
 export type Query = {
