@@ -9,6 +9,7 @@
     "dev:frourio": "frourio --watch",
     "dev:prisma": "prisma generate --watch",
     "build": "npm run generate && node ./scripts/build.prod.js",
+    "createdb": "prisma migrate deploy",
     "generate": "run-p generate:*",
     "generate:frourio": "frourio",
     "generate:prisma": "prisma generate",
