@@ -47,7 +47,7 @@ const Page: NextPage = () => {
       <div className="border-b pb-2">
         <h1 className="text-2xl">メンバー新規作成</h1>
       </div>
-      <form className="max-w-sm mt-8 mx-auto" onSubmit={handleSubmit(onSubmit)}>
+      <form className="max-w-sm mt-8 mx-auto" name="メンバー新規作成フォーム" onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-4">
           <Label>
             氏名
