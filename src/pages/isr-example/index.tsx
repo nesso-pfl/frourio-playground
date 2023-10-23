@@ -42,6 +42,8 @@ type Props = {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  console.log('ISR revalidated!')
+
   return {
     revalidate: 15,
     props: {
