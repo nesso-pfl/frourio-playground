@@ -17,6 +17,9 @@ export const pagesPath = {
     },
     $url: (url?: { hash?: string }) => ({ pathname: '/human' as const, hash: url?.hash })
   },
+  "isr_example": {
+    $url: (url?: { hash?: string }) => ({ pathname: '/isr-example' as const, hash: url?.hash })
+  },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }
 
